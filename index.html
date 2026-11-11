@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./parallaxe/style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="">
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+<link rel="stylesheet" href="./parallaxe/style/style.css">
+    <script src="./parallaxe/script/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <img src="./kit_medias/medias/poster/tt.png" alt="Logo Dune" class="logoDune">
+        <nav>
+            <div class="menuBurger">
+                <a href="#">Trailer</a>
+                <a href="#">Synopsis</a>
+                <a href="#">Characters</a>
+                <a href="#">Gallery</a>
+                <a href="#">Theaters</a>
+                <a href="#">Cast & Crew</a>
+            </div>
+        </nav>
+        <div class="logo">
+            <img src="./kit_medias/medias/logos/legendary_logo.svg" alt="Logo Legendary Pictures">
+            <img src="./kit_medias/medias/logos/wb_logo.svg" alt="Logo Warner Bros">
+        </div>
+        <div class="socials">
+
+            <a href="https://facebook.com">
+                <img src="./kit_medias/medias/logos/logo_facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://twitter.com">
+                <img src="./kit_medias/medias/logos/logo_twitter.svg" alt="Twitter">
+            </a>
+
+            <a href="https://instagram.com">
+                <img src="./kit_medias/medias/logos/logo_instagram.svg" alt="Instagram">
+            </a>
+
+        </div>
+    </header>
+    <main>
+        <article class="scroller">
+            <section class="trailer">
+                <h2 class="first_section_title">Only in cinemas</h2>
+                <div>
+                    <div id="video"></div>
+                </div>
+            </section>
+            <section class="synopsis">
+                <h2>About the film</h2>
+                <img src="./kit_medias/medias/images/denis_villeneuve.webp" alt="Poster Dune">
+                <p>Oscar nominee Denis Villeneuve (“Arrival,” “Blade Runner 2049”) directs Warner Bros. Pictures and
+                    Legendary Pictures’ “Dune,” the big-screen adaptation of Frank Herbert’s seminal bestselling book.
+
+                    A mythic and emotionally charged hero’s journey, “Dune” tells the story of Paul Atreides, a
+                    brilliant and gifted young man born into a great destiny beyond his understanding, who must travel
+                    to the most dangerous planet in the universe to ensure the future of his family and his people. As
+                    malevolent forces explode into conflict over the planet’s exclusive supply of the most precious
+                    resource in existence—a commodity capable of unlocking humanity’s greatest potential—only those who
+                    can conquer their fear will survive.
+
+                    Villeneuve directed “Dune” from a screenplay he co-wrote with Jon Spaihts and Eric Roth based on the
+                    novel of the same name written by Frank Herbert. Villeneuve also produced the film with Mary Parent,
+                    Cale Boyter and Joe Caracciolo, Jr. The executive producers are Tanya Lapointe, Joshua Grode,
+                    Herbert W. Gains, Jon Spaihts, Thomas Tull, Brian Herbert, Byron Merritt and Kim Herbert.
+
+                    Warner Bros. Pictures and Legendary Pictures Present “Dune”.</p>
+            </section>
+            <section class="characters">
+                <h2>Characters</h2>
+                <div class="characters-images">
+                    <img src="./kit_medias/medias/characters/paul_atreides.jpg" alt="Paul Atreïdes">
+                    <img src="./kit_medias/medias/characters/lady_jessica.jpg" alt="Lady Jessica">
+                    <img src="./parallaxe/medias/characters/duke_leto_atreides.jpg" alt="Duke Leto Atreides">
+                    <img src="./kit_medias/medias/characters/baron_harkonnen.jpg" alt="Baron Vladimir Harkonnen">
+                    <img src="./kit_medias/medias/characters/chani.jpg" alt="Chani">
+                    <img src="./kit_medias/medias/characters/duncan_idaho.jpg" alt="Duncan Idaho">
+                    <img src="./kit_medias/medias/characters/gurney_halleck.jpg" alt="Gurney Halleck">
+                    <img src="./kit_medias/medias/characters/stilgar.jpg" alt="Stilgar">
+                    <img src="./kit_medias/medias/characters/liet_kynes.jpg" alt="Dr. Liet-Kynes">
+                    <img src="./kit_medias/medias/images/dune-david-bautista.jpg" alt="Glossu Rabban">
+                    <img src="./parallaxe/medias/characters/piter-de-vries-foto.jpg" alt="Piter De Vries">
+                    <img src="./parallaxe/medias/characters/tufir_hawat.jpg" alt="Thufir Hawat">
+                    <img src="./parallaxe/medias/characters/Shaddam_IV.webp" alt="Shaddam Corrino IV">
+                </div>
+                <div class="characters-thumbnails" aria-label="Carrousel de personnages">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+            <section class="gallery">
+                <h2>Videos & Images</h2>
+                <div class="gallery-images">
+                    <img src="./kit_medias/medias/images/02.jpg" alt="Paul Atreides">
+                    <img src="./kit_medias/medias/images/04.jpg" alt="Leto Atreides et Lady Jessica">
+                    <img src="./kit_medias/medias/images/07.jpg" alt="Paul Atreides et Chani">
+                    <img src="./kit_medias/medias/images/09.jpg" alt="Chani">
+                    <img src="./kit_medias/medias/images/10.jpg" alt="Lady Jessica et Paul Atreides">
+                    <img src="./kit_medias/medias/images/12.jpg" alt="Leto Atreïdes">
+                    <img src="./kit_medias/medias/images/13.jpg" alt="Lady Jessica">
+                    <img src="./kit_medias/medias/images/14.jpg" alt="Docteru Yueh">
+                    <img src="./kit_medias/medias/images/17.jpg" alt="Dr. Liet-Kynes">
+                    <img src="./kit_medias/medias/images/dune_production-14.jpg" alt="combet de Jason Momoa">
+                    <img src="./kit_medias/medias/images/dune_production-16.jpg" alt="Stilgar">
+                    <img src="./kit_medias/medias/images/dune-cast-scaled.jpeg" alt="Regroupement clan Atreides">
+                    <img src="./kit_medias/medias/images/dune-jason-momoa.jpg" alt="Jason Momoa">
+                    <img src="./kit_medias/medias/images/dune-josh-brolin.jpg" alt="Josh Brolin">
+                    <img src="./kit_medias/medias/images/dune-production_01.jpg"
+                        alt="Josh Brolin et Timothée Chalamet sur un vaisseau">
+                    <img src="./kit_medias/medias/images/dune-sharon-duncan-brewster.jpeg" alt="Sharon Duncan-Brewster">
+                    <img src="./kit_medias/medias/images/dune-timothee-chalamet-rebecca-ferguson.jpeg"
+                        alt="Timothee Chalamet et Rebecca Fergusson">
+                    <img src="./kit_medias/medias/images/dune-timothee-chalamet.jpg" alt="Timothee Chalamet">
+                    <img src="./kit_medias/medias/images/dune-zendaya.jpeg" alt="Zendaya">
+                    <img src="./kit_medias/medias/images/Dune04.webp" alt="Paul Atreides et Lady Jessica">
+                    <img src="./kit_medias/medias/images/Dune05.webp" alt="Duncan Idaho">
+                    <img src="./kit_medias/medias/images/Dune06.webp" alt="Dr. Liet-Kynes">
+                </div>
+                <div class="gallery-thumbnails" aria-label="Carrousel de images">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+            <section class="theaters">
+                <h2>Find a theater</h2>
+                <p></p>
+                <button>Ma localisation</button>
+                <p class="localisation"></p>
+                <div id="carte"></div>
+            </section>
+            <section class="cast-crew">
+                <h2>Cast and Crew</h2>
+                 <div class="cast-wrapper">
+                    <div class="cast-grid"></div>
+                    <aside class="cast-detail">
+                        <img class="cast-photo" alt="">
+                        <div class="cast-infos">
+                            <h3 class="cast-name"></h3>
+                            <p class="cast-birthday"></p>
+                            <p class="cast-place"></p>
+                        </div>
+                        <p class="cast-bio"></p>
+                    </aside>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
