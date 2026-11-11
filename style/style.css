@@ -1,0 +1,340 @@
+.logoDune {
+    position: fixed;
+    left: 14px;
+    top: 14px;
+
+    width: 500px;
+    height: 100px;
+
+    object-fit: contain;
+
+    z-index: 10;
+}
+.logo {
+    position: fixed;
+    right: 14px;
+    top: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    z-index: 10;
+}
+.logo img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+    
+    transition: transform 0.2s ease;
+}
+.socials {
+    position: fixed;
+    right: 14px;
+    bottom: 65px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    z-index: 10;
+}
+
+.socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+}
+
+.socials img {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+    
+    transition: transform 0.2s ease;
+}
+
+.socials a:hover img {
+    transform: scale(1.2);
+}
+/* Normalize */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dimensionner les diapos et leur contenu */
+/* Ajouter un fond unique, couvrant l'écran */
+/* Fixer le fond, et hop ! */
+.characters, .gallery, .trailer, .theaters, .cast-crew, .synopsis {
+  height: 100vh;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.trailer {
+  /* On peut aussi mettre un gif animé ou un webp animé... */
+  background-image: url('../medias/characters/paul_atreides.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+}
+.characters, .gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centre verticalement */
+  align-items: center;      /* centre horizontalement */
+}
+.characters h2, .gallery h2 {
+  margin-top: 0;
+  margin-bottom: 2vh;
+}
+.synopsis { 
+  position: relative;
+  background-image: url('../medias/characters/liet_kynes.jpg');
+  overflow: hidden;
+
+  display: grid;
+  /* minmax(0, 1fr) : empêche le contenu d'agrandir les lignes/colonnes */
+  grid-template-columns: 10% repeat(8, minmax(0, 1fr)) 10%;
+  grid-template-rows: repeat(24, minmax(0, 1fr));
+}
+
+.synopsis h2{
+  grid-column: 2 / 6;
+  grid-row: 13 / 15;
+  align-self: end;
+
+  margin: 0;
+  text-align: left;
+  font-weight: 400;
+  font-variant: small-caps;
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.synopsis img {
+  grid-column: 7 / 10;
+  grid-row: 9 / 17;
+  z-index: 3;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.synopsis p {
+  grid-column: 1 / -1;
+  grid-row: 15 / 23;
+  z-index: 1;
+
+  padding: 12vh 10% 0;
+  background-color: rgba(200, 200, 200, 0.6);
+
+  column-count: 3;
+  column-gap: 4rem;
+  column-rule: 1px dotted rgba(255, 255, 255, 0.6);
+
+  text-align: justify;
+  font-size: 0.75rem;
+  overflow: hidden;
+}
+
+.characters {
+  background-image: url('../medias/images/dune-cast-scaled.jpeg');
+}
+    
+.gallery {
+  background-image: url('../medias/images/dune-production_01.jpg');
+}
+
+.theaters {
+  background-image: url('../medias/images/dune-timothee-chalamet-rebecca-ferguson.jpeg');
+}
+
+.cast-crew {
+  background-image: url('../medias/poster/dune_poster_vierge.png');
+}
+.scroller {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+} 
+.scroller section {
+    scroll-snap-align: start;
+    height: 100vh;
+}
+.scroll {
+  position: fixed !important;
+  width: 30vw !important;
+  height: calc(30vw * 3 / 4) !important;
+  top: 5vh !important;
+  right: 5% !important;
+}
+
+#video {
+  width: 35vw;
+  height: calc(35vw * 390 / 640);
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+}
+.trailer > div {
+  position: relative;
+  margin-top: 3em;
+  width: 35vw;
+  height: calc(35vw * 390 / 640);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.gallery-images, .characters-images {
+ width: 50vw;
+ height: 50vh;
+ margin: auto;
+ position: relative;
+}
+
+.gallery-images img,
+.characters-images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-images img:not(:first-of-type),
+.characters-images img:not(:first-of-type) {
+  display: none;
+}
+
+div:nth-of-type(2) {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.characters-thumbnails span, .gallery-thumbnails span {
+ display: inline-block;
+width: 2vw;
+height: 2vw;
+margin: 0 1vw;
+border-radius: 50%;
+background-color: black;
+cursor: pointer;
+}
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: white;
+}
+.characters-images,
+.gallery-images,
+.characters-thumbnails,
+.gallery-thumbnails {
+  line-height: normal;
+  font-size: 1rem;
+}
+button {
+  display: block;
+  margin: auto;
+}
+#carte {
+width: 50vw;
+height: 50vh;
+margin: auto;
+}
+.first_section_title {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.first_section_title {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Cast and Crew ===== */
+.cast-crew {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cast-wrapper {
+  display: flex;
+  gap: 4vw;
+  width: 80vw;
+  height: 55vh;
+}
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4px;
+  flex: 1;
+  min-height: 0;
+}
+.cast-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.cast-grid img:hover {
+  transform: scale(1.05);
+}
+.cast-detail {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(60, 60, 40, 0.8);
+  text-align: left;
+  overflow: auto;
+}
+.cast-photo {
+  width: 100%;
+}
+.cast-infos {
+  text-align: center;
+  align-self: center;
+}
+.cast-name {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+.cast-bio {
+  grid-column: 1 / -1;
+  column-count: 2;
+  column-gap: 1.5rem;
+  font-size: 0.7rem;
+  text-align: justify;
+}
